@@ -9,7 +9,7 @@ export class ProductsService {
     return this.http
       .get(
         process.env.PRESTA_WS_URI +
-          '/products&display=full&output_format=JSON&ws_key=' +
+          '/products?display=full&language=1&output_format=JSON&ws_key=' +
           process.env.PRESTA_KEY,
       )
       .pipe(map((response) => response.data));
